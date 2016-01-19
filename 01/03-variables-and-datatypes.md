@@ -3,7 +3,7 @@
 **Variables & Datatypes**
 
 Variables are one of the essential building blocks of just about any programming
-language.  It's a container that can contain any kind of info, and then used
+language.  It's a container that can hold any kind of info, and then used
 again later.
 
 * Variables are storage for your data.
@@ -17,6 +17,10 @@ var name = 'greg goforth';
 //multiple variable declaration
 var firstName = 'greg',
   lastName = 'goforth';
+
+//or
+var firstName = 'greg';
+var lastName = 'goforth';
 ```
 
 So now we know how to create a variable in javascript, and we know that
@@ -34,8 +38,8 @@ primative being created.  The primative data types are:
 * boolean
 * null
 * undefined
-    
- ```javascript
+ 
+```javascript
 //string example
 var name = 'greg';
 
