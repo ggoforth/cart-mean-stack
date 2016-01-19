@@ -1,7 +1,5 @@
 ###Variables and Datatypes
 
-**Variables & Datatypes**
-
 Variables are one of the essential building blocks of just about any programming
 language.  It's a container that can hold any kind of info, and then used
 again later.
@@ -57,24 +55,21 @@ var payCheck = null; //representation of no value
 var cats = undefined; //representation of a variable that is not yet set
 ```
 
-**Non-Primatives**
+**Truthy vs Falsy**
 
-Non-primative values are data types that can be manipulated / changed without
-creating a new version of that 'thing'.  There are two types of non-primative
-data types in javascript. 
+This is an important concept in javascript (and many other languages).  Certain
+values when evaluated in javascript are considered "falsy".  The following
+values are always falsy:
 
-* Objects
-* Array
+* false
+* 0 (literal number zero)
+* "" (empty string)
+* null
+* undefined
+* NaN (Not A Number, more on this later)
 
-```javascript
-//example of an object literal
-var person = {
-    firstName: 'greg',
-    lastName: 'goforth',
-    worksAt: 'Bitwise Industries',
-    employeeNumber: 9,
-    isCEO: false
-};
-
-console.log(person.firstName); //logs 'greg'
-```
+All other values are considered truthy, including "0" (zero in quotes), "false"
+(false in quotes), empty functions, empty arrays and empty objects. Internalize 
+this, as it's a very important concept to understand.  I won't go into to much 
+detail now about why, just know that it is, and we'll discuss where we will use 
+this more later.
