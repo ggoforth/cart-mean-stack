@@ -4,6 +4,8 @@ Variables are one of the essential building blocks of just about any programming
 language.  It's a container that can hold any kind of info, and then used
 again later.
 
+We use the `assignment operator` to give a variable a value.
+
 * Variables are storage for your data.
 * Variables are defined using the `var` keyword.
 * Multiple variables can be declared by comma separating multiple variable names.
