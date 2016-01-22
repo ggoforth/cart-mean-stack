@@ -1,4 +1,4 @@
-###Control Flow
+###Control Flow / Math
 
 ###Geekwise Academy Cohort JS 1 - Accelerated
 
