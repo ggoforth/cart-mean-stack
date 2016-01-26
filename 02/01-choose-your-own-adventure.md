@@ -18,17 +18,17 @@ of the program I wanted to write.  Having a decision tree is very helpful when y
 
 * Hero encounters a dragon, what does he do?
 
-a. fights
+A. fights
     * Hero stays and fights, but two more dragons appear.  What does he do?
-        a. continues fighting
+        A. continues fighting
             * hero can't fight two dragons at once...**decision tree terminates**
-        b. runs away
+        B. runs away
             * hero lives to fight another day...**decision tree terminates**
-b. runs
+B. runs
     * hero lives to fight another day...**decision tree terminates**
-c. offers starbucks gift cards
+C. offers starbucks gift cards
     * dragon is intreguied, but asks how much is left on the starbucks card?
-        a. less than $5
+        A. less than $5
             * Dragons need more than $5 for their coffee...gobbles our hero...**decision tree ends**
-        b. more than $5
+        B. more than $5
             * Dragon takes our heros offer, takes the card and leaves...**decision tree ends**
