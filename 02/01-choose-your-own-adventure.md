@@ -28,6 +28,6 @@ of the program I wanted to write.  Having a decision tree is very helpful when y
     * offers starbucks gift cards
         * dragon is intreguied, but asks how much is left on the starbucks card?
             * less than $5
-                * Dragons need more than $5 for their coffee...gobbles our hero...**decision tree ends**
+                * Dragons need more than $5 for their coffee...gobbles our hero...**decision tree terminates**
             * more than $5
-                * Dragon takes our heros offer, takes the card and leaves...**decision tree ends**
+                * Dragon takes our heros offer, takes the card and leaves...**decision tree terminates**
