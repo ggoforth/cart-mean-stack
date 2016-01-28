@@ -67,12 +67,12 @@ do {
 **Try it yourself**
 
 ```
-Create a loop (for or while) that will loop 10 times, and skip the 5th and 7th
+Create a loop (for) that will loop 10 times, and skip the 5th and 7th
 loop. All other loops should log the loop number to the console.
+```
 
 The break keyword will, when encountered, immediately stop the loop AND all
 subsequent loops.
-```
 
 **Try it yourself**
 
