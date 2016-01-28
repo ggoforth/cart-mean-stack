@@ -6,18 +6,18 @@ We've talked about functions during our first few classes, but up until now
 we've not really looked at what they are, how they work, and most importantly,
 how we can write our own.
 
-  Lets define a javascript function as: **a set of statements that performs a task
+Lets define a javascript function as: **a set of statements that performs a task
 or calculates a value**
 
 Functions allow you to perform a series of tasks, and return a value that can be
 used later.
 
-  If a function does not return a value, it will automatically return undefined.
+If a function does not return a value, it will automatically return undefined.
 
-  All javascript datatypes have different functions that work on them. For
+All javascript datatypes have different functions that work on them. For
 example:
 
-  * Arrays have `push` and `pop`
+* Arrays have `push` and `pop`
 * Strings have `split` and `charAt`
 * Objects have `hasOwnProperty`
 
@@ -26,7 +26,6 @@ variable of type `String` then you inherit all of those properties.
 
 ```javascript
 //string method, turns string into an array
-//NOTE TO SELF...YOU MIGHT NEED THIS LATER...JUST SAYIN
 var movie = "The Shawshank Redemption";
 var moviePieces = movie.split(" ");
 console.log(moviePieces);
@@ -109,7 +108,6 @@ really nice if we had a way to capitalize a string, for proper names, etc...
 Maybe js provides a nice way to do this:
 
 ```javascript
-
 var name = "greg";
 var capped = name.capitalize();
 
