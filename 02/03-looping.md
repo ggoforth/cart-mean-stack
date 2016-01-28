@@ -66,11 +66,13 @@ do {
 
 **Try it yourself**
 
-```Create a loop (for or while) that will loop 10 times, and skip the 5th and 7th
+```
+Create a loop (for or while) that will loop 10 times, and skip the 5th and 7th
 loop. All other loops should log the loop number to the console.
 
 The break keyword will, when encountered, immediately stop the loop AND all
-subsequent loops.```
+subsequent loops.
+```
 
 **Try it yourself**
 
@@ -99,22 +101,22 @@ Create a program that will:
 * Prompt the user for a starting number
 * Prompt the user for an ending number
 * These numbers will become the start and end points for our loop. If either
-    number is not a number, alert to the user that only numbers can be entered. (no
-    further action should take place, if / else will be handy here)
+number is not a number, alert to the user that only numbers can be entered. (no
+further action should take place, if / else will be handy here)
 * Parse the start and stop points into numbers and store them in variables you can
-    use later
+use later
 * Ensure that the start number is smaller than the stop number, otherwise stop
-    execution (if / else)
+execution (if / else)
 * Create a loop (for or while, you choose) that will loop starting at the starting
-    number, and end on the ending number.
+number, and end on the ending number.
 * For each loop, log to the console if the number is even or odd (remember our %
-    operator :)
+operator :)
 
 Then, create a program that will:
 
 * Create an array holding the numbers 1 - 500
 * Using the array as the basis for a loop, remove one element per loop (pop), with
-    the result being an empty array.
+the result being an empty array.
 * What is the result? Anything surprising happen?  How can we avoid that???
 
 
