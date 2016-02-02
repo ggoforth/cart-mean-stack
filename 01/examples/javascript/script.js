@@ -50,7 +50,7 @@ var answer = confirm(confirmString);
 console.log(answer); //will be true or false
 
 var promptString = 'Enter your first name';
-var answer = prompt(promptString); //enter your name
+var answer = question(promptString); //enter your name
 console.log(answer); //will be your name entered in the previous step
 
 
