@@ -1,6 +1,4 @@
-###Geekwise Academy Cohort JS 1 - Accelerated
-
-**The DOM**
+###The DOM
 
 What is the DOM?
 
