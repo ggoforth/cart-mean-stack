@@ -241,12 +241,11 @@ decide that "greg" isn't an appropriate name for this object, so we want to
 change it. We would have to update all of the places where we are referencing
 that name.
 
-The `this` keyword solves this issue. Just like the special `arguments` variable we
-talked about with functions, functions also have a special variable called `this`.
-So what is `this`? `this` is a special keyword that refers to the functions `context`.
-What is a `context` you might ask? The functions `context` is essentially just a
-reference to the object that owns that function. In this case, our `greg` object.
-Lets add a new function called "context" so we can investigate this a bit.
+The `this` keyword solves this issue. So what is `this`? `this` is a special keyword 
+that refers to the functions `context`. What is a `context` you might ask? The functions 
+`context` is essentially just a reference to the object that owns that function. In this 
+case, our `greg` object. Lets add a new function called "context" so we can investigate 
+this a bit.
 
 ```javascript
 var greg = {
@@ -280,125 +279,3 @@ ordinaryFunction();
 
 What object gets logged when a function doesn't belong to an object?
 
-The `window` object is our "outer most" object / scope. Any functions created that
-are not inside of another function, or part of an object will automatically be
-included in the window object.
-
-So now that we know that the this keyword references the object that the
-function belongs to, we can use that instead of the variable name to access the
-properties.
-
-**Try for yourself**
-
-Edit the speak function to use the this object for accessing the firstName and
-lastName properties.
-
-```javascript
-var greg = {
-    firstName: "Greg",
-    lastName: "Goforth",
-    age: 35,
-    "favorite-food": "pizza",
-    speak: function speak() {
-        var message = this.firstName + " " + this.lastName + " has spoken";
-        console.log(message);
-    }
-};
-
-greg.speak();
-```
-
-Interesting, so this, is just the object that owns the function. What happens if
-we assign that function to a different object?
-
-**Try for yourself**
-
-Create a new object that has a firstName and a lastName property. Call
-speak again, what happens?
-
-```javascript
-var jules = {
-    firstName: "jules",
-    lastName: "goforth"
-};
-
-jules.speak = greg.speak;
-
-jules.speak();
-```
-
-This is a great example of context in action. The object that owns the function
-provides the context.
-
-I lied. context isn't always defined by the object that owns the function, you
-can also "fake" it, by providing a context of your own choosing. This is done 
-with the call and apply functions.
-
-**Call Function**
-
-The call and apply functions simply exist to enable the overloading of context
-in a function call. The only difference between the two is how you pass
-arguments to the function. Lets alter our speak function to accept an argument
-that we'll also speak.
-
-
-```javascript
-var greg = {
-    firstName: "Greg",
-    lastName: "Goforth",
-    age: 35,
-    "favorite-food": "pizza",
-    speak: function speak(words) {
-        var message = words + " " + this.firstName + " " + this.lastName + " has spoken";
-        console.log(message);
-    }
-};
-
-greg.speak("This call and apply stuff is fun!");
-```
-
-Lets call our speak function, providing a completely made up context.
-
-Note how we pass our arguments to the call function, first we provide the fake
-context, then we provide our arguments.
-
-```javascript
-greg.speak.call({
-    firstName: "foo",
-    lastName: "bar"
-}, "This call and apply stuff is fun!");
-```
-
-Notice, even though we called speak on the greg object, we overloaded the
-context by using the call function. In this case, the object we provided became
-the context.
-
-**Apply Function**
-
-The apply function works in a very similar way to the call function, with one
-exception, instead of a comma separated list of arguments, you must provide an
-array as the second argument.
-
-```javascript
-greg.speak.apply({
-    firstName: "John",
-    lastName: "Doe"
-}, ["Apply needs an array as the second argument!"]);
-```
-
-Again, our context was overloaded, so the the this keyword changed to be the
-first argument to the apply function. Our arguments array was then mapped to
-each argument in the function signature and the function was called.
-
-**Try for yourself**
-
-* Create a function that will accept three arguments - movie title, running time
-    (in minutes), and year released.
-* The function should take those arguments and return an object that has title,
-    runningTime and year as keys.
-* Alter your original movies array, to be an array of arrays, where each array
-    contains the title, running time, and year released
-* Loop over your movie array, and use the apply function to call your function,
-    passing to it the current movie array you are on
-* Stick the new object that your function returns into a new array
-* Loop the new array and log the movie title, runningTime and year to the console.

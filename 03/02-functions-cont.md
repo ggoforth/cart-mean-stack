@@ -1,12 +1,5 @@
 ###Geekwise Academy Cohort JS 1 - Accelerated
 
-**Try for yourself**
-
-Refactor the previous movie example to also prompt the user for a movie title,
-and when if it finds a matching title, alert something like "MovieTitle was
-released in movieYear" (substituting actual values for MovieTitle and
-movieYear).
-
 **`prototype`**
 
 At it's simplest, the `prototype` of a javascript object is a collection of
@@ -23,13 +16,6 @@ Benefits of using prototype:
 * Enabled inheritence in javascript
 * Ability to add methods and properties to already existing object instances.
 
-Drawbacks of using prototype:
-
-* No clousures 
-
-Lets look at an example of how to implement a prototype, and then we'll revisit
-the benefits / drawbacks.
-
 Here is an example of creating a prototype for a person:
 
 ```javascript
@@ -44,7 +30,6 @@ Person.prototype = {
         console.log('Hi, my name is ' + this.name);
     }
 };
-
 ```
 
 So, what's going on here?  First, lets look at how we've written the function
