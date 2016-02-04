@@ -1,55 +1,5 @@
 ###Geekwise Academy Cohort JS 1 - Accelerated
 
-**Try for yourself**
-
-* Create a new function called doDebitCredit that has a signature
-    `doDebitCredit(numLoops, action, desc)`
-* The doDebitCredit function should create a loop that will run the specified
-    number of times numLoops, prompt the user with the given descfor a number, and
-    then run the specified action" (HINT: remember functions are first class
-    citizens in javascript, so you can pass them into other functions).
-* Finally, log the final balance and ensure it's the proper amount.
-
-**for / in loop**
-
-The for / in loop is a nice way of looping over an objects keys. It looks like
-this:
-
-```javascript
-var obj = {
-    name: "greg",
-    age: 35
-};
-
-for (var key in obj) {
-    console.log(key);
-    console.log(obj[key]);
-}
-```
-
-One gotcha here...remember we discussed prototype as a way of inheriting
-properties? Well, the for / in loop will also loop over those properties if they
-exist in the object. For this reason, it's good practice to add a check to make
-sure that the key we are working with only exists on the actual object and not
-part of some other prototype.
-
-```javascript
-var obj = {
-    name: "greg",
-    age: 35
-};
-
-for (var key in obj) {
-    if (obj.hasOwnProperty(key)) {
-        console.log(key);
-        console.log(obj[key]);
-    }
-}
-```
-
-This will now ONLY operate on a key that only exists in the specific obj and
-isn't an inherited property.
-
 **The DOM**
 
 What is the DOM?
