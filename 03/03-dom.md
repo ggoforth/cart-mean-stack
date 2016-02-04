@@ -316,11 +316,10 @@ e("a", "link to google", {href: "http://www.google.com"}, {color: "red"});
 
 **Try for yourself**
 
-* Create a `ul` element on an html page with an id of 'movies'
-* Use your original movie array of objects as the basis for a loop
-* During each loop, create one li tag
-* Set the text of the li tag to the movie title.
+* Create a `ul` element on an html page with an id of 'videoGames'
+* Prompt the user for 5 video game titles
+* Loop over each video game title, and create 1 li tag
+* Set the text of the li tag to the videoGame name.
 * Append the newly created li tag to the existing ul
-* Append the ul to the document.body.
 
 The result should be a dynamically created html list.
