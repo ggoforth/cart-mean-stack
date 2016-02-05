@@ -93,30 +93,6 @@ following is the basic workflow:
 
 **Try for yourself**
 
-Convert your movie function that returns a normal object literal into a
-constructor function.  What are all the steps needed to do that?  
-
-**Try for yourself**
-
-Lets revisit our movie array of arrays.  Lets convert the movie function (the
-one that returns a simple object literal) to a constructor function.
-
-* Start with your movie array of arrays.
-* Convert each array in the movie array into a movie object using a constructor
-    function
-* Add a checkIn, checkOut and status functions to your Movie functions prototype
-* The checkIn function should set the this.checkedIn property to true
-* The checkOut function should set the this.checkedIn property to false
-* The status function should look to see if that movie is checked in our out, and
-    return a string stating it's status
-* Create a loop that will run 5 times
-* Inside the loop prompt the user for a movie title they would like to checkout 
-    checkin. (remember, you must spell it the same as in your array)
-* Find the movie object with that title and call the the appropriate function.
-* Finally log out the movie array and lets look at the status of each of those.
-
-**Try for yourself**
-
 * Create a Bank constructor function
 * The constructor function should have a balance property equal to 100
 * Add a credit function to Banks prototype that will add to balance

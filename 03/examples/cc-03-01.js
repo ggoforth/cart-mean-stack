@@ -1,10 +1,12 @@
 //Create a function called `capitalize` that will capitalize any word passed into it.
 function capitalize(str) {
+  //str === 'faith'
   return str.slice(0, 1).toUpperCase() + str.slice(1);
 }
 
 //Create a function called `looper` that will loop over an array that's passed in and capitalize each of the items in the array and log it to the console.
 function looper(arr) {
+  debugger;
   for (var i = 0; i < arr.length; i++) {
     console.log(capitalize(arr[i]));
   }
