@@ -53,9 +53,53 @@ alert(this.getAttribute("rel"));
 
 **Coding Challenge**
 
-* Prompt the user for three video game titles 
-* Create a `ul` and add it to the body of the page
-* Create three `li`'s (for loop)
-* Make the text content of the `li` the video game titles
-* Add a `rel` attribute to the `li`'s with the video game title
-* Add an event handler for `click` on the li.  When clicked, alert the video game title.
+* Add three buttons on a page
+* Set an attribute `data-color="..."` inside each of the buttons
+* Add click event listeners on each button that will change the background color of the body to the color in the `data-color` attribute
+
+**Coding Challenge**
+
+* Create a "memory" game
+* Create markup that that creates a grid pattern, like:
+
+```html
+  <div class='row'>
+    <div class="cube" data-color="red"></div>
+    <div class="cube" data-color="yellow"></div>
+  </div>
+  <div class='row'>
+    <div class="cube" data-color="yellow"></div>
+    <div class="cube" data-color="green"></div>
+  </div>
+  <div class='row'>
+    <div class="cube" data-color="blue"></div>
+    <div class="cube" data-color="green"></div>
+  </div>
+  <div class="row">
+    <div class="cube" data-color="blue"></div>
+    <div class="cube" data-color="red"></div>
+  </div>
+```
+
+```css
+div.row {
+  clear: both;
+}
+
+div.cube {
+  float: left;
+  height: 40px;
+  width: 40px;
+  border: 1px solid;
+}
+```
+
+* Add click event listeners to each `.cube` (remember querySelectorAll???)
+* When you click on each cube you should:
+    * turn it's background color the color found in `data-color`
+    * push `this` (the cube div) onto an array called guesses
+    * if there are two things in the `guesses` array, check to see if their colors match
+    * If they match, remove all things from guesses (`guesses.splice(0)`)
+    * If they don't match, set both guesses background color to `transparent`
+    * remove all things from the guesses array (to start the process over)
+    * EXTRA CREDIT: when all cubes have been turned color, alert "You Won"
