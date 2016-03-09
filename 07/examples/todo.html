@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en"
+      ng-app="todo">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+          crossorigin="anonymous">
+</head>
+<body ng-controller="TodoCtrl as todo">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Todo App</h1>
+            <h2>An angular production</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <form name="addTodo">
+                <div class="form-group">
+                    <label for="title">Todo Title</label>
+                    <input type="text"
+                           class="form-control"
+                           id="title">
+                </div>
+                <div class="form-group">
+                    <label for="desc">Todo Description</label>
+                    <input type="text"
+                           class="form-control"
+                           id="desc">
+                </div>
+
+                <button class="btn btn-primary">Add Todo</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <h3>Todos</h3>
+
+        <div class="list-group">
+            <div ng-repeat="todo in todo.todos"
+                 class="list-group-item">
+                <div class="pull-right">
+                    <input type="checkbox"
+                           ng-checked="todo.complete"
+                           ng-model="todo.complete">
+                </div>
+                {{todo.title}} - {{todo.desc}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h3>Completed Todos</h3>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="todo.js"></script>
+</body>
+</html>
