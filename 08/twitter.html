@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"
+      ng-app="twit">
+<head>
+    <meta charset="UTF-8">
+    <title>Tweeter</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+          href="twitter.css">
+</head>
+<body ng-controller="TweetCtrl as tweet">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form name="tweetForm"
+                  ng-submit="tweet.addTweet(tweet.newTweet)">
+                <div class="form-group">
+                    <textarea placeholder="Tweeter something!"
+                              ng-model="tweet.newTweet"
+                              class="form-control tweet-box"></textarea>
+                    <span class="chars-left">112 Characters Left</span>
+
+                    <button class="btn btn-primary pull-right">Tweeter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div ng-repeat="singleTweet in tweet.tweeters"
+                 class="tweeter">
+                {{singleTweet.tweet}}
+                <div class="actions">
+                    <i class="fa fa-thumbs-o-up"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="twitter.js"></script>
+</body>
+</html>

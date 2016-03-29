@@ -1,0 +1,30 @@
+body {
+    background-color: #4CC5FF;
+}
+
+textarea.form-control.tweet-box {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 10em;
+}
+
+.chars-left {
+    color: #FFFFFF;
+    font-size: 1.2em;
+}
+
+.tweeter {
+    background-color: #FFFFFF;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.actions {
+    margin-top: 15px;
+}
+
+.actions i.fa {
+    font-size: 1.7em;
+}
+
